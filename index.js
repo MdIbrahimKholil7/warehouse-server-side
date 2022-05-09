@@ -39,7 +39,7 @@ async function run() {
     try {
         await client.connect()
         const serviceCollection = client.db('wareHouse').collection('service')
-        // get  
+        // get service data 
         app.get('/service', async (req, res) => {
             const query = {}
             const cursor = serviceCollection.find(query)
@@ -131,7 +131,7 @@ async function run() {
                 expiresIn: '1d'
             })
             res.send({ accessToken })
-
+            console.log('from access token',accessToken)
         })
     } finally {
 
