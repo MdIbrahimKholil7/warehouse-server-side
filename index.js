@@ -19,6 +19,7 @@ const verifyJWT = (req, res, next) => {
     }
     const token = header.split(' ')[1]
     console.log('token', token)
+    // verify jwt token 
     jwt.verify(token, process.env.ACCESS_TOKEN, (err, decode) => {
         if (err) {
             console.log('from error')
