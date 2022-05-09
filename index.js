@@ -39,7 +39,7 @@ async function run() {
     try {
         await client.connect()
         const serviceCollection = client.db('wareHouse').collection('service')
-        // get limit service data 
+        // get limit service data  
         app.get('/service', async (req, res) => {
             const query = {}
             const cursor = serviceCollection.find(query)
