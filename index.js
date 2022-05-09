@@ -131,7 +131,6 @@ async function run() {
                 expiresIn: '1d'
             })
             res.send({ accessToken })
-            console.log('from access token',accessToken)
         })
     } finally {
 
