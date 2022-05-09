@@ -123,7 +123,7 @@ async function run() {
             console.log(req.params)
         })
 
-        // jwt token validation 
+        // jwt token created when user login or register 
         app.post('/login', async (req, res) => {
             const user = req.body
             console.log(user)
